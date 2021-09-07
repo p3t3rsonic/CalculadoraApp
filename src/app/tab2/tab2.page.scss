@@ -1,0 +1,14 @@
+ion-content {
+    --background: #000000;
+}
+
+ion-button{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    height: 95%;
+}
+
+ion-col{
+
+    height: calc(55vh /5); //vh - view height (altura da tela (content))
+}
