@@ -3,12 +3,21 @@ ion-content {
 }
 
 ion-button{
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Verdana', Geneva, Tahoma, sans-serif;
     font-weight: bold;
     height: 95%;
 }
 
 ion-col{
 
-    height: calc(55vh /5); //vh - view height (altura da tela (content))
+    height: calc(60vh /7); //vh - view height (altura da tela (content))
+}
+
+ion-label{
+
+  --ion-font-family: "Verdana, Geneva, Tahoma, sans-serif";
+}
+
+.resultado{
+  font-size: 36px;
 }
