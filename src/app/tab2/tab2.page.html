@@ -21,7 +21,7 @@
 
   <span class="resultado">=</span>
 
-    <ion-label class="ion-text-right resultado">9</ion-label>
+    <ion-label class="ion-text-right resultado"></ion-label>
 
   </ion-item>
   </ion-card>
@@ -31,10 +31,10 @@
     <ion-grid>
   <ion-row>
         <ion-col>
-          <ion-button expand="full">C</ion-button>
+          <ion-button expand="block" (click)="limparTudo()">C</ion-button>
         </ion-col>
         <ion-col>
-          <ion-button expand="full">Del</ion-button>
+          <ion-button expand="full" (click)="limparUlt()">Del</ion-button>
         </ion-col>
         <ion-col>
           <ion-button expand="full" (click)="adicionarPonto()">.</ion-button>
@@ -97,7 +97,7 @@
           <ion-button expand="full" (click)="adicionarNumero('0')">0</ion-button>
         </ion-col>
         <ion-col size="6">
-          <ion-button expand="full">=</ion-button>
+          <ion-button expand="full" (click)="calcRes()">=</ion-button>
         </ion-col>
       </ion-row>
 
