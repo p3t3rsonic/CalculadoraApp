@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Validators } from '@angular/forms';
 import { evaluate } from 'mathjs';
+import { AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-tab2',
@@ -15,7 +16,7 @@ export class Tab2Page {
 
   public ponto = false;
 
-   constructor(){}
+   constructor(public alertController: AlertController){}
 
    adicionarNumero(valor: string){
 
@@ -53,8 +54,21 @@ export class Tab2Page {
         this.resultado = evaluate(this.calculo);
       }catch (e){
         this.resultado = '';
+        this.presentAlert("Erro", "Verificar Erro...")
+
       }
 
     }
+
+    async presentAlert(titulo: string, msg: string) {
+      const alert = await this.alertController.create({
+        header: titulo,
+        message: msg,
+        buttons: ['OK']
+      });
+
+      await alert.present();
+
+}
 
 }
